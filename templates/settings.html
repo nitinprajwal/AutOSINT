@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block body %}
+<h1></h1>
+<form action="{{ url_for('index') }}" method="post">
+  {# Specify the action attribute with the URL for the /search route #}
+  <label for="query"></label>
+  <input
+    type="text"
+    name="eapi"
+    id="eapi"
+    placeholder="Enter E-Mail AbstractAPI Key"
+  />
+  <input
+    type="text"
+    name="papi"
+    id="papi"
+    placeholder="Enter Phone AbstractAPI Key"
+  />
+  <input
+    type="text"
+    name="iapi"
+    id="iapi"
+    placeholder="Enter IP AbstractAPI Key"
+  />
+  <button type="submit" onclick="redirectToIndex()">Submit</button>
+</form>
+<script>
+  function redirectToIndex() {
+    window.location.href = "{{ url_for('index') }}";
+  }
+</script>
+{% endblock %}

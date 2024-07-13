@@ -1,0 +1,75 @@
+{% extends "base.html" %} 
+{% block body %}
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    padding: 5px;
+    text-align: center;
+  }
+  section {
+    margin: 20px;
+  }
+  table {
+    width: 100%;
+    background-color: #111;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th,
+  td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #333;
+    color: #fff;
+  }
+</style>
+
+<header>
+  <h1 class="welcome-text">Search Results</h1>
+</header>
+<section>
+  <!-- Display the result -->
+  {% if result %}
+    <table>
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for key, value in result.items() %}
+          <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% for key, value in result.items() %}
+      <input type="hidden" name="{{ key }}" value="{{ value }}" />
+    {% endfor %}
+  {% else %}
+    <p>No result available.</p>
+  {% endif %}
+</section>
+
+<!-- Download button moved to the bottom -->
+{% if result %}
+  <form action="/download" method="post" style="margin-bottom: 100px;">
+    {% for key, value in result.items() %}
+      <input type="hidden" name="{{ key }}" value="{{ value }}" />
+    {% endfor %}
+    <button type="submit">Download as PDF</button>
+  </form>
+{% endif %}
+
+{% endblock %}

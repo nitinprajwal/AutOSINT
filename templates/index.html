@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+{% block body %}
+<header>
+  <h1 class="welcome-text">Welcome</h1>
+  <!-- Welcome text -->
+</header>
+<section>
+  <!-- Search form -->
+  <form action="{{ url_for('search') }}" method="post"> {# Specify the action attribute with the URL for the /search route #}
+    <label for="query"></label>
+    <input
+      type="text"
+      name="query"
+      id="query"
+      placeholder="Enter an IP address, email, phone number or domain"
+    />
+    <button type="submit">Search</button>
+  </form>
+</section>
+{% endblock %}

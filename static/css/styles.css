@@ -1,0 +1,207 @@
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+}
+
+a {
+  color: #0f0;
+}
+
+a:hover {
+  color: #0a0;
+}
+
+header {
+  background-color: #000;
+  color: #0f0;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  padding: 40px 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: #111;
+  padding: 5px 20px; /* Increased padding to give more space around the logo and navigation items */
+  text-align: right; /* Align navigation items to the right */
+  font-size: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #0f0;
+  text-decoration: none;
+}
+
+section {
+  padding: 20px;
+}
+
+form {
+  text-align: center;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  background-color: #111;
+  border: none;
+  color: #0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: inline-block;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-size: 16px;
+}
+
+input[type="text"] {
+  background-color: #111;
+  border: none;
+  color: #0f0;
+  padding: 12px;
+  margin-bottom: 50px; /* Adjust the margin-bottom to your preference */
+  width: 100%;
+  display: inline-block;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#search-results {
+  background-color: #222;
+  padding: 10px;
+  border: 1px solid #0f0;
+}
+
+footer {
+  background-color: #111;
+  color: #0f0;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.welcome-text {
+  font-size: 90px;
+  display: block;
+  text-align: center;
+  line-height: 100px;
+  height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-top: 60px;
+} 
+
+section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 400px);
+}
+
+.reports,
+.settings {
+  display: inline-block;
+  position: relative;
+  top: -10px; /* Adjust the negative value to move the items up */
+  margin-left: 20px;
+}
+
+button[type="submit"] {
+  background-color: #0a0;
+  border: 1px solid #0f0;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+} 
+
+button[type="submit"]:hover {
+  background-color: #060;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.navbar-logo {
+  max-width: 50px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.navbar-logo-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: auto; /* Push the logo to the left */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin for the last navigation item */
+}
+
+.navbar-logo {
+  max-width: 100px;
+  height: auto;
+  position: left;
+  top: 4px;
+  left: 10px;
+}
+
+.navbar-logo-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
